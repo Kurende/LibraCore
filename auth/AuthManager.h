@@ -33,13 +33,8 @@ public:
 
     bool changePassword(const QString& oldPassword, const QString& newPassword);
 
-    struct ValidationResult {
-        bool isValid;
-        QString message;
-    };
-
-    ValidationResult validatePassword(const QString& password);
-    ValidationResult validateEmail(const QString& email);
+    QString validatePassword(const QString& password);
+    QString validateEmail(const QString& email);
 
     QString getLastError() const { return m_lastError; }
 

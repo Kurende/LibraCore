@@ -86,15 +86,15 @@ bool AuthManager::canManageTransactions() const {
 }
 
 bool AuthManager::registerUser(const User& user, const QString& password) {
-    auto passwordResult = validatePassword(password);
-    if (!passwordResult.isValid) {
-        setLastError(passwordResult.message);
+    QString passwordError = validatePassword(password);
+    if (!passwordError.isEmpty()) {
+        setLastError(passwordError);
         return false;
     }
 
-    auto emailResult = validateEmail(user.getEmail());
-    if (!emailResult.isValid) {
-        setLastError(emailResult.message);
+    QString emailError = validateEmail(user.getEmail());
+    if (!emailError.isEmpty()) {
+        setLastError(emailError);
         return false;
     }
 
@@ -156,9 +156,9 @@ bool AuthManager::verifySecurityAnswer(const QString& email, const QString& answ
 }
 
 bool AuthManager::resetPassword(const QString& email, const QString& newPassword) {
-    auto passwordResult = validatePassword(newPassword);
-    if (!passwordResult.isValid) {
-        setLastError(passwordResult.message);
+    QString passwordError = validatePassword(newPassword);
+    if (!passwordError.isEmpty()) {
+        setLastError(passwordError);
         return false;
     }
 
@@ -190,9 +190,9 @@ bool AuthManager::changePassword(const QString& oldPassword, const QString& newP
         return false;
     }
 
-    auto passwordResult = validatePassword(newPassword);
-    if (!passwordResult.isValid) {
-        setLastError(passwordResult.message);
+    QString passwordError = validatePassword(newPassword);
+    if (!passwordError.isEmpty()) {
+        setLastError(passwordError);
         return false;
     }
 
@@ -207,51 +207,35 @@ bool AuthManager::changePassword(const QString& oldPassword, const QString& newP
     return true;
 }
 
-AuthManager::ValidationResult AuthManager::validatePassword(const QString& password) {
-    ValidationResult result;
-
+QString AuthManager::validatePassword(const QString& password) {
     if (password.isEmpty()) {
-        result.isValid = false;
-        result.message = "Password cannot be empty";
-        return result;
+        return "Password cannot be empty";
     }
 
-    if (password.length() < 6) {
-        result.isValid = false;
-        result.message = "Password must be at least 6 characters long";
-        return result;
+    if (password.length() > 15) {
+        return "Password must be no more than 15 characters";
     }
 
-    if (password.length() > 50) {
-        result.isValid = false;
-        result.message = "Password must be less than 50 characters";
-        return result;
+    static const QRegularExpression passwordRegex(
+        "^(?=.{8,15}$)(?=.*[A-Z])(?=.*[a-z])(?=.*[^A-Za-z0-9]).*$");
+    if (!passwordRegex.match(password).hasMatch()) {
+        return "Password must be at least 8 characters and include a special character, an uppercase letter, and a lowercase letter";
     }
 
-    result.isValid = true;
-    result.message = "Password is valid";
-    return result;
+    return "";
 }
 
-AuthManager::ValidationResult AuthManager::validateEmail(const QString& email) {
-    ValidationResult result;
-
+QString AuthManager::validateEmail(const QString& email) {
     if (email.isEmpty()) {
-        result.isValid = false;
-        result.message = "Email cannot be empty";
-        return result;
+        return "Email cannot be empty";
     }
 
     QRegularExpression regex("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
     if (!regex.match(email).hasMatch()) {
-        result.isValid = false;
-        result.message = "Invalid email format";
-        return result;
+        return "Invalid email format";
     }
 
-    result.isValid = true;
-    result.message = "Email is valid";
-    return result;
+    return "";
 }
 
 void AuthManager::setLastError(const QString& error) {
