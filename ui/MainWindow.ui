@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1236</width>
-    <height>665</height>
+    <width>1200</width>
+    <height>720</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -19,7 +19,7 @@
   <property name="minimumSize">
    <size>
     <width>650</width>
-    <height>650</height>
+    <height>40</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -401,19 +401,19 @@
           <property name="frameShadow">
            <enum>QFrame::Shadow::Raised</enum>
           </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_12">
-           <item alignment="Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignVCenter">
+          <layout class="QVBoxLayout" name="verticalLayout_28">
+           <item alignment="Qt::AlignmentFlag::AlignHCenter">
             <widget class="QFrame" name="frame_registrationCard">
              <property name="minimumSize">
               <size>
-               <width>400</width>
-               <height>600</height>
+               <width>800</width>
+               <height>0</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
-               <width>400</width>
-               <height>600</height>
+               <width>800</width>
+               <height>500</height>
               </size>
              </property>
              <property name="frameShape">
@@ -422,39 +422,58 @@
              <property name="frameShadow">
               <enum>QFrame::Shadow::Raised</enum>
              </property>
-             <layout class="QVBoxLayout" name="verticalLayout_29">
-              <property name="spacing">
-               <number>10</number>
+             <layout class="QGridLayout" name="gridLayout_7">
+              <property name="leftMargin">
+               <number>15</number>
               </property>
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_28">
+              <property name="topMargin">
+               <number>15</number>
+              </property>
+              <property name="rightMargin">
+               <number>15</number>
+              </property>
+              <property name="bottomMargin">
+               <number>15</number>
+              </property>
+              <property name="horizontalSpacing">
+               <number>25</number>
+              </property>
+              <property name="verticalSpacing">
+               <number>15</number>
+              </property>
+              <item row="1" column="1">
+               <widget class="QComboBox" name="QComboBox_regRole">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1" rowspan="3">
+               <layout class="QVBoxLayout" name="verticalLayout_14">
                 <property name="spacing">
-                 <number>15</number>
+                 <number>0</number>
                 </property>
-                <property name="leftMargin">
-                 <number>35</number>
-                </property>
-                <property name="topMargin">
-                 <number>10</number>
-                </property>
-                <property name="rightMargin">
-                 <number>35</number>
-                </property>
-                <property name="bottomMargin">
-                 <number>5</number>
-                </property>
-                <item alignment="Qt::AlignmentFlag::AlignHCenter">
-                 <widget class="QLabel" name="label_registerTitle">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
+                <item>
+                 <widget class="QLabel" name="label_securityQuestionLabel">
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
-                    <height>20</height>
+                    <height>40</height>
                    </size>
                   </property>
                   <property name="maximumSize">
@@ -465,76 +484,16 @@
                   </property>
                   <property name="font">
                    <font>
-                    <family>Century Gothic</family>
-                    <pointsize>12</pointsize>
                     <bold>true</bold>
                    </font>
                   </property>
                   <property name="text">
-                   <string>Sign Up</string>
+                   <string>Security question:</string>
                   </property>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLineEdit" name="lineEdit_regName">
-                  <property name="placeholderText">
-                   <string>Full Names</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLineEdit" name="lineEdit_regSurname">
-                  <property name="placeholderText">
-                   <string>Surname</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLineEdit" name="lineEdit_regEmail">
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="placeholderText">
-                   <string>E-mail</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLineEdit" name="lineEdit_regPassword">
-                  <property name="echoMode">
-                   <enum>QLineEdit::EchoMode::Password</enum>
-                  </property>
-                  <property name="placeholderText">
-                   <string>Password</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLineEdit" name="lineEdit_regRepeatPassword">
-                  <property name="echoMode">
-                   <enum>QLineEdit::EchoMode::Password</enum>
-                  </property>
-                  <property name="placeholderText">
-                   <string>Repeat Password</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLineEdit" name="lineEdit_regContactNo">
-                  <property name="placeholderText">
-                   <string>Contact Number</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLineEdit" name="lineEdit_regSchoolName">
-                  <property name="placeholderText">
-                   <string>School Name</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QComboBox" name="QComboBox_regRole">
+                 <widget class="QComboBox" name="QComboBox_securityQuestion">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                     <horstretch>0</horstretch>
@@ -544,133 +503,301 @@
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
-                    <height>30</height>
+                    <height>40</height>
                    </size>
                   </property>
                   <property name="maximumSize">
                    <size>
                     <width>16777215</width>
-                    <height>30</height>
+                    <height>40</height>
                    </size>
                   </property>
                  </widget>
                 </item>
+               </layout>
+              </item>
+              <item row="5" column="0">
+               <widget class="QLineEdit" name="lineEdit_regPassword">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="echoMode">
+                 <enum>QLineEdit::EchoMode::Password</enum>
+                </property>
+                <property name="placeholderText">
+                 <string>Password</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLineEdit" name="lineEdit_regSurname">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="placeholderText">
+                 <string>Surname</string>
+                </property>
+               </widget>
+              </item>
+              <item row="9" column="0">
+               <widget class="QLineEdit" name="lineEdit_regRepeatPassword">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="echoMode">
+                 <enum>QLineEdit::EchoMode::Password</enum>
+                </property>
+                <property name="placeholderText">
+                 <string>Repeat Password</string>
+                </property>
+               </widget>
+              </item>
+              <item row="22" column="0" colspan="2">
+               <layout class="QHBoxLayout" name="horizontalLayout_11">
+                <property name="spacing">
+                 <number>5</number>
+                </property>
                 <item>
-                 <layout class="QVBoxLayout" name="verticalLayout_14">
-                  <property name="spacing">
-                   <number>0</number>
+                 <widget class="QPushButton" name="pushButton_registerSubmit">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>40</height>
+                   </size>
                   </property>
-                  <item>
-                   <widget class="QLabel" name="label_securityQuestionLabel">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>20</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>16777215</width>
-                      <height>20</height>
-                     </size>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <bold>true</bold>
-                     </font>
-                    </property>
-                    <property name="text">
-                     <string>Security question:</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QComboBox" name="QComboBox_securityQuestion">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>30</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>16777215</width>
-                      <height>30</height>
-                     </size>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </item>
-                <item>
-                 <widget class="QLineEdit" name="lineEdit_regSecurityAnswer">
-                  <property name="placeholderText">
-                   <string>Answer</string>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Register</string>
                   </property>
                  </widget>
                 </item>
                 <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_11">
-                  <property name="spacing">
-                   <number>5</number>
+                 <spacer name="horizontalSpacer">
+                  <property name="orientation">
+                   <enum>Qt::Orientation::Horizontal</enum>
                   </property>
-                  <item>
-                   <widget class="QPushButton" name="pushButton_registerSubmit">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>40</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>16777215</width>
-                      <height>40</height>
-                     </size>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <bold>true</bold>
-                     </font>
-                    </property>
-                    <property name="text">
-                     <string>Register</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QPushButton" name="pushButton_regBackToLogin">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>40</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>16777215</width>
-                      <height>40</height>
-                     </size>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <bold>true</bold>
-                     </font>
-                    </property>
-                    <property name="text">
-                     <string>Cancel</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Policy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>16</width>
+                    <height>7</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButton_regBackToLogin">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Cancel</string>
+                  </property>
+                 </widget>
                 </item>
                </layout>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLineEdit" name="lineEdit_regName">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="placeholderText">
+                 <string>Full Names</string>
+                </property>
+               </widget>
+              </item>
+              <item row="11" column="1">
+               <widget class="QLineEdit" name="lineEdit_regSchoolName">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="placeholderText">
+                 <string>School Name</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLineEdit" name="lineEdit_regEmail">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="placeholderText">
+                 <string>E-mail</string>
+                </property>
+               </widget>
+              </item>
+              <item row="9" column="1">
+               <widget class="QLineEdit" name="lineEdit_regContactNo">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="placeholderText">
+                 <string>Contact Number</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0" alignment="Qt::AlignmentFlag::AlignHCenter">
+               <widget class="QLabel" name="label_registerTitle">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Century Gothic</family>
+                  <pointsize>12</pointsize>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Sign Up</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="1">
+               <widget class="QLineEdit" name="lineEdit_regSecurityAnswer">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="placeholderText">
+                 <string>Answer</string>
+                </property>
+               </widget>
+              </item>
+              <item row="10" column="0">
+               <widget class="QLabel" name="label_passwordRx">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
               </item>
              </layout>
             </widget>
@@ -1155,19 +1282,19 @@
                 <string/>
                </property>
                <property name="pixmap">
-                <pixmap>../icons/utils/manage_search_40dp_E3E3E3_FILL0_wght300_GRAD0_opsz40.svg</pixmap>
+                <pixmap resource="../resources.qrc">:/icons/icons/Liquid glass/icons8-search-96.png</pixmap>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
                </property>
               </widget>
              </item>
-             <item>
+             <item alignment="Qt::AlignmentFlag::AlignVCenter">
               <widget class="QLineEdit" name="lineEdit_quickSearch">
                <property name="minimumSize">
                 <size>
                  <width>247</width>
-                 <height>28</height>
+                 <height>38</height>
                 </size>
                </property>
                <property name="maximumSize">
@@ -1656,13 +1783,13 @@
               </property>
               <property name="minimumSize">
                <size>
-                <width>0</width>
+                <width>207</width>
                 <height>0</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>214</width>
+                <width>207</width>
                 <height>16777215</height>
                </size>
               </property>
@@ -1675,6 +1802,15 @@
               <layout class="QVBoxLayout" name="verticalLayout_33">
                <property name="spacing">
                 <number>5</number>
+               </property>
+               <property name="leftMargin">
+                <number>9</number>
+               </property>
+               <property name="topMargin">
+                <number>9</number>
+               </property>
+               <property name="rightMargin">
+                <number>9</number>
                </property>
                <item>
                 <layout class="QHBoxLayout" name="horizontalLayout_19">
@@ -1751,7 +1887,7 @@
                   <widget class="QFrame" name="frame_sidebarTransact">
                    <property name="maximumSize">
                     <size>
-                     <width>196</width>
+                     <width>185</width>
                      <height>16777215</height>
                     </size>
                    </property>
@@ -1917,7 +2053,7 @@
                   <widget class="QFrame" name="frame_sidebarBooks">
                    <property name="maximumSize">
                     <size>
-                     <width>196</width>
+                     <width>185</width>
                      <height>16777215</height>
                     </size>
                    </property>
@@ -2043,7 +2179,7 @@
                   <widget class="QFrame" name="frame_sidebarLearners">
                    <property name="maximumSize">
                     <size>
-                     <width>196</width>
+                     <width>185</width>
                      <height>16777215</height>
                     </size>
                    </property>
@@ -2182,7 +2318,7 @@
                   <widget class="QFrame" name="frame_sidebarReoprts">
                    <property name="maximumSize">
                     <size>
-                     <width>196</width>
+                     <width>185</width>
                      <height>16777215</height>
                     </size>
                    </property>
@@ -2328,13 +2464,7 @@
                   <widget class="QPushButton" name="pushButton_usersSidebar">
                    <property name="minimumSize">
                     <size>
-                     <width>100</width>
-                     <height>40</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>100</width>
+                     <width>180</width>
                      <height>40</height>
                     </size>
                    </property>
@@ -2360,13 +2490,7 @@
                   <widget class="QPushButton" name="pushButton_settingsSidebar">
                    <property name="minimumSize">
                     <size>
-                     <width>100</width>
-                     <height>40</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>40</width>
+                     <width>180</width>
                      <height>40</height>
                     </size>
                    </property>
@@ -2487,7 +2611,7 @@
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>736</width>
+                         <width>458</width>
                          <height>1202</height>
                         </rect>
                        </property>
@@ -3270,8 +3394,8 @@
                                <property name="geometry">
                                 <rect>
                                  <x>0</x>
-                                 <y>-109</y>
-                                 <width>232</width>
+                                 <y>0</y>
+                                 <width>258</width>
                                  <height>516</height>
                                 </rect>
                                </property>
@@ -3537,13 +3661,13 @@
                            </property>
                            <layout class="QGridLayout" name="gridLayout_9">
                             <property name="leftMargin">
-                             <number>45</number>
+                             <number>9</number>
                             </property>
                             <property name="topMargin">
                              <number>45</number>
                             </property>
                             <property name="rightMargin">
-                             <number>45</number>
+                             <number>9</number>
                             </property>
                             <property name="bottomMargin">
                              <number>15</number>
@@ -3804,15 +3928,18 @@
                            <property name="geometry">
                             <rect>
                              <x>0</x>
-                             <y>-217</y>
-                             <width>718</width>
-                             <height>734</height>
+                             <y>0</y>
+                             <width>531</width>
+                             <height>770</height>
                             </rect>
                            </property>
                            <layout class="QGridLayout" name="gridLayout">
                             <item row="0" column="0">
                              <widget class="QWidget" name="widget_updateBookBackground" native="true">
                               <layout class="QVBoxLayout" name="verticalLayout_100">
+                               <property name="spacing">
+                                <number>9</number>
+                               </property>
                                <property name="leftMargin">
                                 <number>180</number>
                                </property>
@@ -4198,7 +4325,7 @@
                     <item>
                      <widget class="QStackedWidget" name="stackedWidget_learnersPages">
                       <property name="currentIndex">
-                       <number>1</number>
+                       <number>0</number>
                       </property>
                       <widget class="QWidget" name="page_addViewLearnerInfo">
                        <layout class="QVBoxLayout" name="verticalLayout_197">
@@ -4287,7 +4414,7 @@
                                 <rect>
                                  <x>0</x>
                                  <y>0</y>
-                                 <width>219</width>
+                                 <width>164</width>
                                  <height>406</height>
                                 </rect>
                                </property>
@@ -4710,8 +4837,8 @@
                            <property name="geometry">
                             <rect>
                              <x>0</x>
-                             <y>-132</y>
-                             <width>718</width>
+                             <y>0</y>
+                             <width>663</width>
                              <height>569</height>
                             </rect>
                            </property>
@@ -4784,8 +4911,8 @@
                                            <minute>0</minute>
                                            <second>0</second>
                                            <year>2024</year>
-                                           <month>11</month>
-                                           <day>5</day>
+                                           <month>10</month>
+                                           <day>28</day>
                                           </datetime>
                                          </property>
                                          <property name="displayFormat">
@@ -4843,7 +4970,7 @@
                                            <second>0</second>
                                            <year>2025</year>
                                            <month>7</month>
-                                           <day>19</day>
+                                           <day>11</day>
                                           </datetime>
                                          </property>
                                          <property name="displayFormat">
@@ -5220,7 +5347,7 @@
                        <item>
                         <widget class="QStackedWidget" name="stackedWidget_learnersProfile">
                          <property name="currentIndex">
-                          <number>1</number>
+                          <number>0</number>
                          </property>
                          <widget class="QWidget" name="page_profile">
                           <layout class="QVBoxLayout" name="verticalLayout_145">
@@ -5379,7 +5506,7 @@
                              </item>
                              <item>
                               <layout class="QHBoxLayout" name="horizontalLayout_16">
-                               <item alignment="Qt::AlignmentFlag::AlignTop">
+                               <item>
                                 <widget class="QWidget" name="widget_summaryBackground" native="true">
                                  <property name="minimumSize">
                                   <size>
@@ -5416,7 +5543,7 @@
                                     </property>
                                    </widget>
                                   </item>
-                                  <item alignment="Qt::AlignmentFlag::AlignLeft">
+                                  <item>
                                    <widget class="QFrame" name="frame_profileInfo">
                                     <property name="minimumSize">
                                      <size>
@@ -5875,15 +6002,6 @@
                              <item>
                               <widget class="QWidget" name="widget_updateLearnerBackground" native="true">
                                <layout class="QVBoxLayout" name="verticalLayout_80">
-                                <property name="leftMargin">
-                                 <number>180</number>
-                                </property>
-                                <property name="topMargin">
-                                 <number>0</number>
-                                </property>
-                                <property name="rightMargin">
-                                 <number>180</number>
-                                </property>
                                 <item>
                                  <layout class="QVBoxLayout" name="verticalLayout_74">
                                   <item alignment="Qt::AlignmentFlag::AlignHCenter">
@@ -5976,6 +6094,55 @@
                                  </widget>
                                 </item>
                                 <item>
+                                 <layout class="QVBoxLayout" name="verticalLayout_72">
+                                  <item>
+                                   <widget class="QLabel" name="label_editLearnerDOBTitle">
+                                    <property name="minimumSize">
+                                     <size>
+                                      <width>0</width>
+                                      <height>20</height>
+                                     </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>16777215</width>
+                                      <height>20</height>
+                                     </size>
+                                    </property>
+                                    <property name="text">
+                                     <string>Date Of Birth</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QDateEdit" name="dateEdit_editLearnerDOB">
+                                    <property name="minimumSize">
+                                     <size>
+                                      <width>0</width>
+                                      <height>40</height>
+                                     </size>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </item>
+                                <item>
+                                 <widget class="QLineEdit" name="lineEdit_editLearnerContact">
+                                  <property name="minimumSize">
+                                   <size>
+                                    <width>0</width>
+                                    <height>40</height>
+                                   </size>
+                                  </property>
+                                  <property name="text">
+                                   <string/>
+                                  </property>
+                                  <property name="placeholderText">
+                                   <string>Contact Number</string>
+                                  </property>
+                                 </widget>
+                                </item>
+                                <item>
                                  <layout class="QVBoxLayout" name="verticalLayout_87">
                                   <item>
                                    <widget class="QLabel" name="label_editLearnerGradeTitle">
@@ -6006,55 +6173,6 @@
                                     </property>
                                     <property name="cursor">
                                      <cursorShape>PointingHandCursor</cursorShape>
-                                    </property>
-                                   </widget>
-                                  </item>
-                                 </layout>
-                                </item>
-                                <item>
-                                 <widget class="QLineEdit" name="lineEdit_editLearnerContact">
-                                  <property name="minimumSize">
-                                   <size>
-                                    <width>0</width>
-                                    <height>40</height>
-                                   </size>
-                                  </property>
-                                  <property name="text">
-                                   <string/>
-                                  </property>
-                                  <property name="placeholderText">
-                                   <string>Contact Number</string>
-                                  </property>
-                                 </widget>
-                                </item>
-                                <item>
-                                 <layout class="QVBoxLayout" name="verticalLayout_72">
-                                  <item>
-                                   <widget class="QLabel" name="label_editLearnerDOBTitle">
-                                    <property name="minimumSize">
-                                     <size>
-                                      <width>0</width>
-                                      <height>20</height>
-                                     </size>
-                                    </property>
-                                    <property name="maximumSize">
-                                     <size>
-                                      <width>16777215</width>
-                                      <height>20</height>
-                                     </size>
-                                    </property>
-                                    <property name="text">
-                                     <string>Date Of Birth</string>
-                                    </property>
-                                   </widget>
-                                  </item>
-                                  <item>
-                                   <widget class="QDateEdit" name="dateEdit_editLearnerDOB">
-                                    <property name="minimumSize">
-                                     <size>
-                                      <width>0</width>
-                                      <height>40</height>
-                                     </size>
                                     </property>
                                    </widget>
                                   </item>
@@ -6174,7 +6292,7 @@
                                  <rect>
                                   <x>0</x>
                                   <y>0</y>
-                                  <width>698</width>
+                                  <width>302</width>
                                   <height>960</height>
                                  </rect>
                                 </property>
@@ -6914,7 +7032,7 @@
                             <rect>
                              <x>0</x>
                              <y>0</y>
-                             <width>718</width>
+                             <width>408</width>
                              <height>737</height>
                             </rect>
                            </property>
@@ -7376,7 +7494,7 @@
                             <rect>
                              <x>0</x>
                              <y>0</y>
-                             <width>718</width>
+                             <width>293</width>
                              <height>1345</height>
                             </rect>
                            </property>
@@ -7831,7 +7949,7 @@
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>736</width>
+                         <width>499</width>
                          <height>966</height>
                         </rect>
                        </property>
@@ -8134,7 +8252,7 @@
                     <item>
                      <widget class="QStackedWidget" name="stackedWidget_usersPages">
                       <property name="currentIndex">
-                       <number>0</number>
+                       <number>3</number>
                       </property>
                       <widget class="QWidget" name="page_userProfile">
                        <layout class="QVBoxLayout" name="verticalLayout_82">
@@ -8353,7 +8471,7 @@ border:red;}</string>
                                    <number>5</number>
                                   </property>
                                   <item>
-                                   <widget class="QLabel" name="label_profileInitialSurname_2">
+                                   <widget class="QLabel" name="label_profileInitialLast">
                                     <property name="minimumSize">
                                      <size>
                                       <width>0</width>
@@ -8367,7 +8485,7 @@ border:red;}</string>
                                      </size>
                                     </property>
                                     <property name="text">
-                                     <string>a</string>
+                                     <string/>
                                     </property>
                                    </widget>
                                   </item>
@@ -8386,7 +8504,7 @@ border:red;}</string>
                                      </size>
                                     </property>
                                     <property name="text">
-                                     <string>b</string>
+                                     <string/>
                                     </property>
                                    </widget>
                                   </item>
@@ -8406,7 +8524,7 @@ border:red;}</string>
                                  <widget class="QPushButton" name="pushButton_editUserProfile">
                                   <property name="maximumSize">
                                    <size>
-                                    <width>110</width>
+                                    <width>130</width>
                                     <height>16777215</height>
                                    </size>
                                   </property>
@@ -8451,6 +8569,12 @@ border:red;}</string>
                                 </item>
                                 <item alignment="Qt::AlignmentFlag::AlignLeft">
                                  <widget class="QPushButton" name="pushButton_changeUserPassword">
+                                  <property name="minimumSize">
+                                   <size>
+                                    <width>150</width>
+                                    <height>0</height>
+                                   </size>
+                                  </property>
                                   <property name="font">
                                    <font>
                                     <italic>false</italic>
@@ -8972,8 +9096,8 @@ border:red;}</string>
                             <rect>
                              <x>0</x>
                              <y>0</y>
-                             <width>718</width>
-                             <height>792</height>
+                             <width>528</width>
+                             <height>438</height>
                             </rect>
                            </property>
                            <layout class="QVBoxLayout" name="verticalLayout_94">
@@ -9016,7 +9140,7 @@ border:red;}</string>
                                     </widget>
                                    </item>
                                    <item>
-                                    <widget class="QLineEdit" name="lineEdit_editBookISBN_2">
+                                    <widget class="QLineEdit" name="lineEdit_adminSearchUser">
                                      <property name="minimumSize">
                                       <size>
                                        <width>0</width>
@@ -9032,7 +9156,7 @@ border:red;}</string>
                                     </widget>
                                    </item>
                                    <item>
-                                    <widget class="QPushButton" name="pushButton_BackToLearnersList_2">
+                                    <widget class="QPushButton" name="pushButton_adminUserSearch">
                                      <property name="minimumSize">
                                       <size>
                                        <width>0</width>
@@ -9058,7 +9182,7 @@ border:red;}</string>
                                   </layout>
                                  </item>
                                  <item>
-                                  <widget class="QTableWidget" name="tableWidget_lostBooks_2">
+                                  <widget class="QTableWidget" name="tableWidget_users">
                                    <property name="minimumSize">
                                     <size>
                                      <width>0</width>
@@ -9114,7 +9238,7 @@ border:red;}</string>
                                     </widget>
                                    </item>
                                    <item>
-                                    <widget class="QLabel" name="label_summaryTitle_7">
+                                    <widget class="QLabel" name="label_selectedUser">
                                      <property name="minimumSize">
                                       <size>
                                        <width>0</width>
@@ -9134,7 +9258,7 @@ border:red;}</string>
                                       </font>
                                      </property>
                                      <property name="text">
-                                      <string>User</string>
+                                      <string/>
                                      </property>
                                     </widget>
                                    </item>
@@ -9143,7 +9267,7 @@ border:red;}</string>
                                  <item>
                                   <layout class="QHBoxLayout" name="horizontalLayout_63">
                                    <item>
-                                    <widget class="QPushButton" name="pushButton_AddUser">
+                                    <widget class="QPushButton" name="pushButton_adminAddUser">
                                      <property name="minimumSize">
                                       <size>
                                        <width>0</width>
@@ -9167,7 +9291,7 @@ border:red;}</string>
                                     </widget>
                                    </item>
                                    <item>
-                                    <widget class="QPushButton" name="pushButton_BackToLearnersList_4">
+                                    <widget class="QPushButton" name="pushButton_lineEdit_adminEditUserInfo">
                                      <property name="minimumSize">
                                       <size>
                                        <width>0</width>
@@ -9191,7 +9315,7 @@ border:red;}</string>
                                     </widget>
                                    </item>
                                    <item>
-                                    <widget class="QPushButton" name="pushButton_BackToLearnersList_5">
+                                    <widget class="QPushButton" name="pushButton_lineEdit_adminDeleteUser">
                                      <property name="minimumSize">
                                       <size>
                                        <width>0</width>
@@ -9215,7 +9339,7 @@ border:red;}</string>
                                     </widget>
                                    </item>
                                    <item>
-                                    <widget class="QPushButton" name="pushButton_BackToLearnersList_6">
+                                    <widget class="QPushButton" name="pushButton_lineEdit_adminResetPassword">
                                      <property name="minimumSize">
                                       <size>
                                        <width>0</width>
@@ -9239,7 +9363,7 @@ border:red;}</string>
                                     </widget>
                                    </item>
                                    <item>
-                                    <widget class="QPushButton" name="pushButton_BackToLearnersList_7">
+                                    <widget class="QPushButton" name="pushButton_lineEdit_adminRefresh">
                                      <property name="minimumSize">
                                       <size>
                                        <width>0</width>
@@ -9265,167 +9389,6 @@ border:red;}</string>
                                   </layout>
                                  </item>
                                 </layout>
-                               </item>
-                               <item>
-                                <widget class="QGroupBox" name="groupBox">
-                                 <property name="title">
-                                  <string>GroupBox</string>
-                                 </property>
-                                 <layout class="QVBoxLayout" name="verticalLayout_104">
-                                  <item>
-                                   <layout class="QHBoxLayout" name="horizontalLayout_64">
-                                    <item>
-                                     <widget class="QLabel" name="label_summaryTitle_8">
-                                      <property name="minimumSize">
-                                       <size>
-                                        <width>150</width>
-                                        <height>150</height>
-                                       </size>
-                                      </property>
-                                      <property name="font">
-                                       <font>
-                                        <bold>false</bold>
-                                        <underline>false</underline>
-                                       </font>
-                                      </property>
-                                      <property name="text">
-                                       <string>Showing 4 of 4 Users</string>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                    <item alignment="Qt::AlignmentFlag::AlignTop">
-                                     <widget class="QLabel" name="label_summaryTitle_11">
-                                      <property name="minimumSize">
-                                       <size>
-                                        <width>150</width>
-                                        <height>150</height>
-                                       </size>
-                                      </property>
-                                      <property name="maximumSize">
-                                       <size>
-                                        <width>16777215</width>
-                                        <height>20</height>
-                                       </size>
-                                      </property>
-                                      <property name="font">
-                                       <font>
-                                        <bold>false</bold>
-                                        <underline>false</underline>
-                                       </font>
-                                      </property>
-                                      <property name="text">
-                                       <string>Showing 4 of 4 Users</string>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                    <item alignment="Qt::AlignmentFlag::AlignTop">
-                                     <widget class="QLabel" name="label_summaryTitle_12">
-                                      <property name="minimumSize">
-                                       <size>
-                                        <width>150</width>
-                                        <height>150</height>
-                                       </size>
-                                      </property>
-                                      <property name="maximumSize">
-                                       <size>
-                                        <width>16777215</width>
-                                        <height>20</height>
-                                       </size>
-                                      </property>
-                                      <property name="font">
-                                       <font>
-                                        <bold>false</bold>
-                                        <underline>false</underline>
-                                       </font>
-                                      </property>
-                                      <property name="text">
-                                       <string>Showing 4 of 4 Users</string>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                   </layout>
-                                  </item>
-                                  <item>
-                                   <layout class="QHBoxLayout" name="horizontalLayout_65">
-                                    <item alignment="Qt::AlignmentFlag::AlignTop">
-                                     <widget class="QLabel" name="label_summaryTitle_9">
-                                      <property name="minimumSize">
-                                       <size>
-                                        <width>150</width>
-                                        <height>150</height>
-                                       </size>
-                                      </property>
-                                      <property name="maximumSize">
-                                       <size>
-                                        <width>16777215</width>
-                                        <height>20</height>
-                                       </size>
-                                      </property>
-                                      <property name="font">
-                                       <font>
-                                        <bold>false</bold>
-                                        <underline>false</underline>
-                                       </font>
-                                      </property>
-                                      <property name="text">
-                                       <string>Showing 4 of 4 Users</string>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                    <item alignment="Qt::AlignmentFlag::AlignTop">
-                                     <widget class="QLabel" name="label_summaryTitle_10">
-                                      <property name="minimumSize">
-                                       <size>
-                                        <width>150</width>
-                                        <height>150</height>
-                                       </size>
-                                      </property>
-                                      <property name="maximumSize">
-                                       <size>
-                                        <width>16777215</width>
-                                        <height>20</height>
-                                       </size>
-                                      </property>
-                                      <property name="font">
-                                       <font>
-                                        <bold>false</bold>
-                                        <underline>false</underline>
-                                       </font>
-                                      </property>
-                                      <property name="text">
-                                       <string>Showing 4 of 4 Users</string>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                    <item alignment="Qt::AlignmentFlag::AlignTop">
-                                     <widget class="QLabel" name="label_summaryTitle_13">
-                                      <property name="minimumSize">
-                                       <size>
-                                        <width>150</width>
-                                        <height>150</height>
-                                       </size>
-                                      </property>
-                                      <property name="maximumSize">
-                                       <size>
-                                        <width>16777215</width>
-                                        <height>20</height>
-                                       </size>
-                                      </property>
-                                      <property name="font">
-                                       <font>
-                                        <bold>false</bold>
-                                        <underline>false</underline>
-                                       </font>
-                                      </property>
-                                      <property name="text">
-                                       <string>Showing 4 of 4 Users</string>
-                                      </property>
-                                     </widget>
-                                    </item>
-                                   </layout>
-                                  </item>
-                                 </layout>
-                                </widget>
                                </item>
                               </layout>
                              </widget>
@@ -9672,7 +9635,7 @@ border:red;}</string>
                                    </widget>
                                   </item>
                                   <item>
-                                   <widget class="QLineEdit" name="lineEdit_regName_2">
+                                   <widget class="QLineEdit" name="lineEdit_adminRegName">
                                     <property name="minimumSize">
                                      <size>
                                       <width>0</width>
@@ -9691,7 +9654,7 @@ border:red;}</string>
                                    </widget>
                                   </item>
                                   <item>
-                                   <widget class="QLineEdit" name="lineEdit_regSurname_2">
+                                   <widget class="QLineEdit" name="lineEdit_adminRegSurname">
                                     <property name="minimumSize">
                                      <size>
                                       <width>0</width>
@@ -9710,7 +9673,7 @@ border:red;}</string>
                                    </widget>
                                   </item>
                                   <item>
-                                   <widget class="QLineEdit" name="lineEdit_regEmail_2">
+                                   <widget class="QLineEdit" name="lineEdit_adminRegEmail">
                                     <property name="minimumSize">
                                      <size>
                                       <width>0</width>
@@ -9732,7 +9695,7 @@ border:red;}</string>
                                    </widget>
                                   </item>
                                   <item>
-                                   <widget class="QLineEdit" name="lineEdit_regPassword_2">
+                                   <widget class="QLineEdit" name="lineEdit_adminRegPassword">
                                     <property name="minimumSize">
                                      <size>
                                       <width>0</width>
@@ -9754,7 +9717,7 @@ border:red;}</string>
                                    </widget>
                                   </item>
                                   <item>
-                                   <widget class="QLineEdit" name="lineEdit_regRepeatPassword_2">
+                                   <widget class="QLineEdit" name="lineEdit_adminRegRepeatPassword">
                                     <property name="minimumSize">
                                      <size>
                                       <width>0</width>
@@ -9776,7 +9739,7 @@ border:red;}</string>
                                    </widget>
                                   </item>
                                   <item>
-                                   <widget class="QLineEdit" name="lineEdit_regContactNo_2">
+                                   <widget class="QLineEdit" name="lineEdit_adminRegContactNo">
                                     <property name="minimumSize">
                                      <size>
                                       <width>0</width>
@@ -9795,7 +9758,7 @@ border:red;}</string>
                                    </widget>
                                   </item>
                                   <item>
-                                   <widget class="QLineEdit" name="lineEdit_regSchoolName_2">
+                                   <widget class="QLineEdit" name="lineEdit_adminRegSchoolName">
                                     <property name="minimumSize">
                                      <size>
                                       <width>0</width>
@@ -9814,7 +9777,7 @@ border:red;}</string>
                                    </widget>
                                   </item>
                                   <item>
-                                   <widget class="QComboBox" name="QComboBox_regRole_2">
+                                   <widget class="QComboBox" name="QComboBox_adminRegRole">
                                     <property name="sizePolicy">
                                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                                       <horstretch>0</horstretch>
@@ -9865,7 +9828,7 @@ border:red;}</string>
                                      </widget>
                                     </item>
                                     <item>
-                                     <widget class="QComboBox" name="QComboBox_securityQuestion_2">
+                                     <widget class="QComboBox" name="QComboBox_adminSecurityQuestion">
                                       <property name="sizePolicy">
                                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                                         <horstretch>0</horstretch>
@@ -9889,7 +9852,7 @@ border:red;}</string>
                                    </layout>
                                   </item>
                                   <item>
-                                   <widget class="QLineEdit" name="lineEdit_regSecurityAnswer_2">
+                                   <widget class="QLineEdit" name="lineEdit_adminRegSecurityAnswer">
                                     <property name="minimumSize">
                                      <size>
                                       <width>0</width>
@@ -9913,7 +9876,7 @@ border:red;}</string>
                                      <number>5</number>
                                     </property>
                                     <item>
-                                     <widget class="QPushButton" name="pushButton_registerSubmit_2">
+                                     <widget class="QPushButton" name="pushButton_adminRegisterSubmit">
                                       <property name="minimumSize">
                                        <size>
                                         <width>0</width>
@@ -9932,7 +9895,7 @@ border:red;}</string>
                                      </widget>
                                     </item>
                                     <item>
-                                     <widget class="QPushButton" name="pushButton_regBackToLogin_2">
+                                     <widget class="QPushButton" name="pushButton_adminRegBackToLogin">
                                       <property name="minimumSize">
                                        <size>
                                         <width>0</width>
@@ -9987,8 +9950,8 @@ border:red;}</string>
                             <rect>
                              <x>0</x>
                              <y>0</y>
-                             <width>730</width>
-                             <height>517</height>
+                             <width>96</width>
+                             <height>174</height>
                             </rect>
                            </property>
                            <layout class="QVBoxLayout" name="verticalLayout_144">
@@ -10062,7 +10025,7 @@ border:red;}</string>
                                 <rect>
                                  <x>0</x>
                                  <y>0</y>
-                                 <width>696</width>
+                                 <width>243</width>
                                  <height>810</height>
                                 </rect>
                                </property>
