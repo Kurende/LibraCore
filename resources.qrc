@@ -1,0 +1,45 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>icons/Liquid glass/icons8-sync-100.png</file>
+        <file>icons/Liquid glass/icons8-return-book-100.png</file>
+        <file>icons/Liquid glass/icons8-search-96.png</file>
+        <file>icons/Liquid glass/icons8-add-user-male-100.png</file>
+        <file>icons/Liquid glass/icons8-forgot-password-100.png</file>
+        <file>icons/Liquid glass/icons8-login-100.png</file>
+        <file>icons/Liquid glass/icons8-logout-100.png</file>
+        <file>icons/Liquid glass/login-rounded-right.png</file>
+        <file>icons/Liquid glass/icons8-export-96.png</file>
+        <file>icons/Liquid glass/borrow-book.png</file>
+        <file>icons/composite/transact up.png</file>
+        <file>icons/composite/books down.png</file>
+        <file>icons/composite/books icon.png</file>
+        <file>icons/composite/books up.png</file>
+        <file>icons/composite/learners down.png</file>
+        <file>icons/composite/learners icon.png</file>
+        <file>icons/composite/learners up.png</file>
+        <file>icons/composite/reports down.png</file>
+        <file>icons/composite/reports icon.png</file>
+        <file>icons/composite/reports up.png</file>
+        <file>icons/composite/transact down.png</file>
+        <file>icons/composite/transact icon.png</file>
+        <file>icons/composite/transact up.png</file>
+        <file>icons/Liquid glass/icons8-gear-96.png</file>
+        <file>icons/Liquid glass/icons8-group-96 (1).png</file>
+        <file>icons/Liquid glass/icons8-group-96.png</file>
+        <file>icons/Liquid glass/icons8-home-96 (1).png</file>
+        <file>icons/Liquid glass/icons8-home-96.png</file>
+        <file>icons/Liquid glass/icons8-menu-96.png</file>
+        <file>icons/Liquid glass/icons8-report-96.png</file>
+        <file>icons/Liquid glass/icons8-report-card-96.png</file>
+        <file>icons/Liquid glass/icons8-save-96.png</file>
+        <file>icons/Liquid glass/icons8-school-96.png</file>
+        <file>icons/Liquid glass/icons8-transaction-96.png</file>
+        <file>icons/utils/user.png</file>
+        <file>icons/utils/logo1.svg</file>
+    </qresource>
+    <qresource prefix="/images"/>
+    <qresource prefix="/theme">
+        <file>themes/dark.qss</file>
+        <file>themes/light.qss</file>
+    </qresource>
+</RCC>
